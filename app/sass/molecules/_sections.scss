@@ -1,0 +1,46 @@
+.section {
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 30px auto;
+  max-width: 1216px;
+  padding: 16px 17px;
+}
+.section-header {
+  border-bottom: 1px solid $border-color;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.67px;
+  line-height: 18px;
+}
+.section-title {
+  margin: 0 0 16px;
+  padding: 0;
+}
+.section-body {padding-top: 17px;}
+.section-body-top-indent {padding-top: 58px;}
+.section-body-side-indent {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.section-row {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  .section-body{padding-top: 0;}
+}
+.section-step {
+  min-height: 782px;
+  .section-header {
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .section-title {float: left;}
+  .section-note {
+    float: right;
+    padding-top: 2px;
+  }
+}

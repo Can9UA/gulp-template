@@ -1,0 +1,36 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+//
+//## Colors for use across the site.
+
+$black:                             #000;
+$white:                             #fff;
+$grey:                              #5a5a5a;
+$border-color:                      #e4e4e4;
+
+$brand-primary:                     #1c3f5b !default;
+$brand-primary-light:               #b1c2d6 !default;
+$brand-success:                     #1b6861 !default;
+$brand-info:                        #1d6372 !default;
+$brand-warning:                     #8b8e1d !default;
+$brand-danger:                      #682C2a !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$ff-headers:                       'Vm Headers regular', Helvetica, Arial, sans-serif !default;
+$ff-headers-bold:                  'Vm Headers Bold', Helvetica, Arial, sans-serif !default;
+$ff-text:                          'Vm Text Regular', Helvetica, Arial, sans-serif !default;
+$ff-text-bold:                     'Vm Text Bold', Helvetica, Arial, sans-serif !default;
+
+
+//** breakpoints start
+$xs-breakpoint:                     320px;
+$sm-breakpoint:                     481px;
+$md-breakpoint:                     640px;
+$lg-breakpoint:                     767px;
+$xl-breakpoint:                     1280px;

@@ -1,0 +1,52 @@
+extends _modules/layout
+block body
+  //wrapper starts
+  .wrapper
+    //header starts
+    include _modules/header
+    //header ends
+    //main starts
+    main.main
+      .container
+        section.section.section-step
+          .section-header
+            h1.section-title Opret kampagne
+            .section-note Step 1/3
+          .section-body
+            h2 Start med at vælg kampagne-typen du ønsker at oprette
+            ul.tiles
+              li.tiles-item
+                .box
+                  .box-header
+                    h3.box-title Ny bil
+                  .box-body.item-table(data-stretch-item="group1")
+                    .item-cell
+                      figure.media
+                        img(src="images/content/img-new-car.png" width="160" height="74" alt="image description")
+                        figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  .box-footer
+                    button.btn.btn-primary.btn-sm Vælg
+              li.tiles-item
+                .box
+                  .box-header
+                    h3.box-title Brugt bil
+                  .box-body.item-table(data-stretch-item="group1")
+                    .item-cell
+                      figure.media
+                        img(src="images/content/img-used-car.png" width="161" height="69" alt="image description")
+                        figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  .box-footer
+                    button.btn.btn-primary.btn-sm Vælg
+              li.tiles-item
+                .box
+                  .box-header
+                    h3.box-title Service
+                  .box-body.item-table(data-stretch-item="group1")
+                    .item-cell
+                      figure.media
+                        img(src="images/content/img-tools.png" width="80" height="81" alt="image description")
+                        figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  .box-footer
+                    button.btn.btn-primary.btn-sm Vælg
+    //main ends
+  //wrapper ends

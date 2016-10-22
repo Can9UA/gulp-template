@@ -1,0 +1,19 @@
+.header {
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+  .header-holder {
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .logo-holder {
+    float: left;
+    padding-top: 8px;
+    text-align: center;
+    width: 126px;
+  }
+  nav.nav {float: left;}
+  .options {float: right;}
+}

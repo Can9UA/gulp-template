@@ -1,0 +1,67 @@
+//
+// Auxiliary
+// --------------------------------------------------
+
+// Visibility
+// -------------------------
+
+.is-hidden {display: none !important;}
+.is-visible {display: block !important;}
+
+// Horizontal alignment
+// -------------------------
+
+.pull-left {float: left !important;}
+.pull-right {float: right !important;}
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
+
+// Vertical alignment
+// -------------------------
+
+.item-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.item-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Accessibility
+// -------------------------
+
+.accessibility {
+  left: -9999px;
+  position: absolute;
+  top: 0;
+}
+
+// Images
+// -------------------------
+
+.responsive-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.placeholder-img {display: block;}
+
+.scroll-holder {
+  height: 100%;
+  overflow: auto;
+}
+
+// Helpers
+// -------------------------
+
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

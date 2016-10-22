@@ -1,0 +1,29 @@
+//
+// Footer
+// --------------------------------------------------
+#footer {
+  color: #fff;
+  .holder {
+    padding: 10px 10px 5px;
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .copy {text-align: center;}
+  @media only screen and (min-width: $md-breakpoint) {
+    .partners-list {float: left;}
+    .copy {
+      float: right;
+      max-width: 144px;
+      text-align: right;
+    }
+  }
+  @media only screen and (min-width: $xl-breakpoint) {
+    .holder {
+      padding: 20px 10px;
+    }
+    .copy {max-width: 200px;}
+  }
+}

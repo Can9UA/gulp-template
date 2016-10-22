@@ -1,0 +1,144 @@
+extends _modules/layout
+block body
+  .wrapper
+    include _modules/header
+    main.main
+      .container
+        section.section
+          .section-header
+            h1.section-title Velkommen til Volkswagen’s kampagne værktøj
+          .section-body.section-body-top-indent
+            .ui-grid
+              .col-1
+                .box
+                  .box-header
+                    h2.h3.box-title Visninger
+                  .box-body.item-table(data-stretch-item="group1")
+                    .item-cell
+                      .counter
+                        strong.counter-number 2908
+                        p.counter-description Senest 15 dage
+              .col-2
+                .box
+                  .box-header
+                    h2.h3.box-title Kliks
+                  .box-body.item-table(data-stretch-item="group1")
+                    .item-cell
+                      .counter
+                        strong.counter-number 1237
+                        p.counter-description Senest 15 dage
+              .col-3
+                .diagram
+                  .diagram-body
+                    ul.diagram-list
+                      -
+                        var progressItems = ['54%', '43%', '50%', '57%', '58%',
+                                             '62%', '50%', '79%', '52%', '43%',
+                                             '57%', '68%', '51%', '50%', '38%']
+                      each value, i in progressItems
+                        li.diagram-item
+                          .progress
+                            .progress-bar
+                              .progress-value(style="height: " + value + ";")
+                            .progress-description
+                              strong #{i + 1}
+                    .diagram-description
+                      p Visninger senest 15 dage
+        section.section.section-row
+          .section-body.text-center
+            .message.message-primary
+              button(title="Close message").btn-close X
+              p Der er sket en opdatering
+            .message.message-success
+              button(title="Close message").btn-close X
+              p Kampagnen er blevet oprettet
+            .message.message-warning
+              button(title="Close message").btn-close X
+              p Kampagnen udløber om 1 dag
+            .message.message-danger
+              button(title="Close message").btn-close X
+              p Der er sket en fejl - prøv igen
+        section.section.section-row
+          .section-body.section-body-side-indent
+            .pagination
+              ul.pagination
+                - var n = 0;
+                while n < 6
+                  li.pagination-item&attributes(n == 0 ? {"class": "active"} : {})
+                    button.btn-pagination #{n + 1}
+                  - n++;
+                li.pagination-item
+                  button.btn-pagination.btn-pagination-next &gt;
+            .btn-group.text-center
+              button.btn.btn-primary Primary
+              button.btn.btn-secondary Secondary
+            .grid-row
+              .grid-col-6.grid-prepend-3
+                label(for="text") Inputfield title
+                .input-holder
+                  input#text(type="text" placeholder="Placeholder text")
+            .ui-row
+              .grid-row
+                .grid-col-4
+                  .box
+                    .box-header
+                      h2.h3.box-title Box title
+                    .box-body.item-table(data-stretch-item="group2")
+                      .item-cell
+                        .counter
+                          strong.counter-number 123456
+                          p.counter-description Meta description
+                .grid-col-4
+                  .box
+                    .box-header
+                      h2.h3.box-title Box title
+                    .box-body.item-table(data-stretch-item="group2")
+                      .item-cell
+                        .counter
+                          strong.counter-number 987654
+                          p.counter-description Meta description
+                .grid-col-4
+                  .box
+                    .box-header
+                      h2.h3.box-title Box title
+                    .box-body.item-table(data-stretch-item="group2")
+                      .item-cell
+                        .counter
+                          strong.counter-number 654987
+                          p.counter-description Meta description
+            h3 Table - list
+            .table-holder
+              table.table.table-striped
+                thead
+                  tr
+                    th Name
+                    th Type
+                    th Periode
+                    th Budget
+                    th
+                    th
+                    th
+                    th
+                    th
+                tbody
+                  tr
+                    td Value #1
+                    td Value #2
+                    td Value #3
+                    td(colspan="3") Value #4
+                  tr
+                    td Value #1
+                    td Value #2
+                    td Value #3
+                    td(colspan="3") Value #4
+                  tr
+                    td Value #1
+                    td Value #2
+                    td Value #3
+                    td(colspan="3") Value #4
+                  tr
+                    td Value #1
+                    td Value #2
+                    td Value #3
+                    td(colspan="3") Value #4
+    include _modules/footer
