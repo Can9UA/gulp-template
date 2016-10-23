@@ -1,15 +1,5 @@
-//
-// Auxiliary
-// --------------------------------------------------
-
-// Visibility
-// -------------------------
-
-.is-hidden {display: none !important;}
-.is-visible {display: block !important;}
-
-// Horizontal alignment
-// -------------------------
+.show {display: block !important;}
+.hidden {display: none !important;}
 
 .pull-left {float: left !important;}
 .pull-right {float: right !important;}
@@ -17,8 +7,7 @@
 .text-center {text-align: center !important;}
 .text-right {text-align: right !important;}
 
-// Vertical alignment
-// -------------------------
+.full-width {width: 100% !important;}
 
 .item-table {
   display: table;
@@ -30,17 +19,11 @@
   vertical-align: middle;
 }
 
-// Accessibility
-// -------------------------
-
 .accessibility {
   left: -9999px;
   position: absolute;
   top: 0;
 }
-
-// Images
-// -------------------------
 
 .responsive-img {
   display: block;
@@ -53,15 +36,4 @@
 .scroll-holder {
   height: 100%;
   overflow: auto;
-}
-
-// Helpers
-// -------------------------
-
-%clearfix {
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
 }

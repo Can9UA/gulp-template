@@ -1,155 +1,23 @@
 .nav-list {
-  border-left: 1px solid $border-color;
-  font: 600 16px/23px $ff-headers-bold;
-  letter-spacing: 0.67px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
 }
 .nav-item {
-  border-right: 1px solid $border-color;
-  float: left;
-  text-align: center;
 }
 .nav-link {
-  box-sizing: border-box;
-  color: $grey;
-  display: block;
-  max-width: 220px;
-  min-width: 198px;
-  overflow: hidden;
-  padding: 23px 10px;
-  position: relative;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  &:before {
-    background-color: transparent;
-    bottom: 0;
-    content: '';
-    height: 3px;
-    left: 0;
-    position: absolute;
-    right: 0;
-  }
-  &:hover {text-decoration: none;}
-  &:hover:before,
-  .active &:before {background-color: #448cca;}
-  @media only screen and (max-width: 1150px) {min-width: 150px;}
 }
-
 .options {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
 }
 .options-item {
-  border-left: 1px solid $border-color;
-  float: left;
-  height: 69px;
-  min-width: 82px;
 }
 .options-link {
-  display: block;
-  height: 100%;
 }
-
-.diagram-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-}
-.diagram-item {
-  float: left;
-  & + & {
-    margin-left: 19px;
-    @media only screen and (max-width: 1140px) {margin-left: 14px;}
-  }
-}
-
-.pagination {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  li {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  li + li {margin-left: 8px;}
-  button {
-    -webkit-appearance: none;
-    background: $white;
-    border: 1px solid #e9e9e9;
-    border-radius: 2px;
-    color: #999;
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    line-height: 17px;
-    min-width: 29px;
-    padding: 5px;
-    &:hover {
-      border-color: transparent;
-      color: #5a5a5a;
-      font-weight: 700;
-      position: relative;
-      &:after {
-        background-color: #438aca;
-        bottom: 0;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        right: 0;
-      }
-    }
-  }
-  .slick-active {
-    button {
-      border-color: transparent;
-      color: #5a5a5a;
-      cursor: default;
-      font-weight: 700;
-      position: relative;
-      &:after {
-        background-color: #438aca;
-        bottom: 0;
-        content: '';
-        height: 2px;
-        left: 0;
-        position: absolute;
-        right: 0;
-      }
-    }
-  }
-}
-
-.tiles {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-.tiles-item {
-  display: inline-block;
-  margin: 0 20px;
-  width: 260px;
-}
+// .tiles {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   text-align: center;
+// }
+// .tiles-item {
+//   display: inline-block;
+//   margin: 0 20px;
+//   width: 260px;
+// }

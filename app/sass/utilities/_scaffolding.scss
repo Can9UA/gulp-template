@@ -90,16 +90,8 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-body {
-  background-color: #f4f4f4;
-  color: $grey;
-  font: 400 14px/19px $ff-text;
-  letter-spacing: 0.58px;
-  margin: 0;
-  min-width: 1000px; // desktop only
-}
+body {margin: 0;}
 
-strong {font-family: $ff-text-bold;}
 // Links reset styles
 // --------------------------------------------------
 
