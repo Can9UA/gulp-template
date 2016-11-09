@@ -1,0 +1,238 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$ico-angular-name: 'ico-angular';
+$ico-angular-x: 0px;
+$ico-angular-y: 104px;
+$ico-angular-offset-x: 0px;
+$ico-angular-offset-y: -104px;
+$ico-angular-width: 100px;
+$ico-angular-height: 100px;
+$ico-angular-total-width: 390px;
+$ico-angular-total-height: 204px;
+$ico-angular-image: '../images/sprite.png';
+$ico-angular: (0px, 104px, 0px, -104px, 100px, 100px, 390px, 204px, '../images/sprite.png', 'ico-angular', );
+$ico-css3-name: 'ico-css3';
+$ico-css3-x: 104px;
+$ico-css3-y: 104px;
+$ico-css3-offset-x: -104px;
+$ico-css3-offset-y: -104px;
+$ico-css3-width: 100px;
+$ico-css3-height: 100px;
+$ico-css3-total-width: 390px;
+$ico-css3-total-height: 204px;
+$ico-css3-image: '../images/sprite.png';
+$ico-css3: (104px, 104px, -104px, -104px, 100px, 100px, 390px, 204px, '../images/sprite.png', 'ico-css3', );
+$ico-html5-name: 'ico-html5';
+$ico-html5-x: 290px;
+$ico-html5-y: 0px;
+$ico-html5-offset-x: -290px;
+$ico-html5-offset-y: 0px;
+$ico-html5-width: 100px;
+$ico-html5-height: 100px;
+$ico-html5-total-width: 390px;
+$ico-html5-total-height: 204px;
+$ico-html5-image: '../images/sprite.png';
+$ico-html5: (290px, 0px, -290px, 0px, 100px, 100px, 390px, 204px, '../images/sprite.png', 'ico-html5', );
+$ico-node-name: 'ico-node';
+$ico-node-x: 0px;
+$ico-node-y: 0px;
+$ico-node-offset-x: 0px;
+$ico-node-offset-y: 0px;
+$ico-node-width: 286px;
+$ico-node-height: 100px;
+$ico-node-total-width: 390px;
+$ico-node-total-height: 204px;
+$ico-node-image: '../images/sprite.png';
+$ico-node: (0px, 0px, 0px, 0px, 286px, 100px, 390px, 204px, '../images/sprite.png', 'ico-node', );
+$ico-angular-2x-name: 'ico-angular@2x';
+$ico-angular-2x-x: 0px;
+$ico-angular-2x-y: 208px;
+$ico-angular-2x-offset-x: 0px;
+$ico-angular-2x-offset-y: -208px;
+$ico-angular-2x-width: 200px;
+$ico-angular-2x-height: 200px;
+$ico-angular-2x-total-width: 780px;
+$ico-angular-2x-total-height: 408px;
+$ico-angular-2x-image: '../images/sprite@2x.png';
+$ico-angular-2x: (0px, 208px, 0px, -208px, 200px, 200px, 780px, 408px, '../images/sprite@2x.png', 'ico-angular@2x', );
+$ico-css3-2x-name: 'ico-css3@2x';
+$ico-css3-2x-x: 208px;
+$ico-css3-2x-y: 208px;
+$ico-css3-2x-offset-x: -208px;
+$ico-css3-2x-offset-y: -208px;
+$ico-css3-2x-width: 200px;
+$ico-css3-2x-height: 200px;
+$ico-css3-2x-total-width: 780px;
+$ico-css3-2x-total-height: 408px;
+$ico-css3-2x-image: '../images/sprite@2x.png';
+$ico-css3-2x: (208px, 208px, -208px, -208px, 200px, 200px, 780px, 408px, '../images/sprite@2x.png', 'ico-css3@2x', );
+$ico-html5-2x-name: 'ico-html5@2x';
+$ico-html5-2x-x: 580px;
+$ico-html5-2x-y: 0px;
+$ico-html5-2x-offset-x: -580px;
+$ico-html5-2x-offset-y: 0px;
+$ico-html5-2x-width: 200px;
+$ico-html5-2x-height: 200px;
+$ico-html5-2x-total-width: 780px;
+$ico-html5-2x-total-height: 408px;
+$ico-html5-2x-image: '../images/sprite@2x.png';
+$ico-html5-2x: (580px, 0px, -580px, 0px, 200px, 200px, 780px, 408px, '../images/sprite@2x.png', 'ico-html5@2x', );
+$ico-node-2x-name: 'ico-node@2x';
+$ico-node-2x-x: 0px;
+$ico-node-2x-y: 0px;
+$ico-node-2x-offset-x: 0px;
+$ico-node-2x-offset-y: 0px;
+$ico-node-2x-width: 572px;
+$ico-node-2x-height: 200px;
+$ico-node-2x-total-width: 780px;
+$ico-node-2x-total-height: 408px;
+$ico-node-2x-image: '../images/sprite@2x.png';
+$ico-node-2x: (0px, 0px, 0px, 0px, 572px, 200px, 780px, 408px, '../images/sprite@2x.png', 'ico-node@2x', );
+$spritesheet-width: 390px;
+$spritesheet-height: 204px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($ico-angular, $ico-css3, $ico-html5, $ico-node, );
+$spritesheet: (390px, 204px, '../images/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 780px;
+$retina-spritesheet-height: 408px;
+$retina-spritesheet-image: '../images/sprite@2x.png';
+$retina-spritesheet-sprites: ($ico-angular-2x, $ico-css3-2x, $ico-html5-2x, $ico-node-2x, );
+$retina-spritesheet: (780px, 408px, '../images/sprite@2x.png', $retina-spritesheet-sprites, );
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+$ico-angular-group-name: 'ico-angular';
+$ico-angular-group: ('ico-angular', $ico-angular, $ico-angular-2x, );
+$ico-css3-group-name: 'ico-css3';
+$ico-css3-group: ('ico-css3', $ico-css3, $ico-css3-2x, );
+$ico-html5-group-name: 'ico-html5';
+$ico-html5-group: ('ico-html5', $ico-html5, $ico-html5-2x, );
+$ico-node-group-name: 'ico-node';
+$ico-node-group: ('ico-node', $ico-node, $ico-node-2x, );
+$retina-groups: ($ico-angular-group, $ico-css3-group, $ico-html5-group, $ico-node-group, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

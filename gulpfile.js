@@ -22,16 +22,18 @@ const merge = require('merge-stream');
 
 gulp.task('sprite', function () {
   const spriteData = gulp.src('app/images/sprites/*.png')
-              .pipe(spritesmith({
-                imgName: 'sprite.png',
-                imgPath: '../images/sprite.png',
-                retinaSrcFilter: ['app/images/sprites/*@2x.png'],
-                retinaImgName: 'sprite@2x.png',
-                retinaImgPath: '../images/sprite@2x.png',
-                cssName: '_sprites.scss',
-                cssFormat: 'css',
-                padding: 4
-              }));
+      .pipe(spritesmith({
+        imgName: 'sprite.png',
+        imgPath: '../images/sprite.png',
+        retinaSrcFilter: ['app/images/sprites/*@2x.png'],
+        retinaImgName: 'sprite@2x.png',
+        retinaImgPath: '../images/sprite@2x.png',
+        cssName: '_sprites-mixins.scss',
+        padding: 4,
+        cssVarMap: function(sprite) {
+          sprite.name = 'ico-' + sprite.name;
+        }
+      }));
 
   const imgStream = spriteData.img.pipe(gulp.dest('app/images/'));
 
