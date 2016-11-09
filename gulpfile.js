@@ -16,6 +16,30 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const debug = require('gulp-debug');
 
+// sprites
+const spritesmith = require('gulp.spritesmith');
+const merge = require('merge-stream');
+
+gulp.task('sprite', function () {
+  const spriteData = gulp.src('app/images/sprites/*.png')
+              .pipe(spritesmith({
+                imgName: 'sprite.png',
+                imgPath: '../images/sprite.png',
+                retinaSrcFilter: ['app/images/sprites/*@2x.png'],
+                retinaImgName: 'sprite@2x.png',
+                retinaImgPath: '../images/sprite@2x.png',
+                cssName: '_sprites.scss',
+                cssFormat: 'css',
+                padding: 4
+              }));
+
+  const imgStream = spriteData.img.pipe(gulp.dest('app/images/'));
+
+  const cssStream = spriteData.css.pipe(gulp.dest('app/sass/atoms/'));
+
+  return merge(imgStream, cssStream);
+});
+
 // common livereload
 gulp.task('watch', function () {
   gulp.watch(['app/pug/**/*.pug'], gulp.series('pug-compile'));
@@ -73,7 +97,7 @@ gulp.task('scss-compile', function () {
 
 gulp.task('default',
   gulp.series(
-    'clean', 'pug-compile', 'scss-compile',
+    'clean', 'pug-compile', 'sprite', 'scss-compile',
     gulp.parallel('start-browserSync', 'watch')
   )
 );

@@ -1,3 +1,5 @@
+.icon {display: inline-block;}
+@import "sprites"; // will be create by gulp task
 @import "buttons";
 @import "form-elements";
 @import "table";
