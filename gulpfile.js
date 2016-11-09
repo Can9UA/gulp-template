@@ -20,7 +20,7 @@ const debug = require('gulp-debug');
 const spritesmith = require('gulp.spritesmith');
 const merge = require('merge-stream');
 
-gulp.task('sprite', function () {
+gulp.task('sprite-compile', function () {
   const spriteData = gulp.src('app/images/sprites/*.png')
       .pipe(spritesmith({
         imgName: 'sprite.png',
@@ -46,6 +46,7 @@ gulp.task('sprite', function () {
 gulp.task('watch', function () {
   gulp.watch(['app/pug/**/*.pug'], gulp.series('pug-compile'));
   gulp.watch(['app/sass/**/*.scss'], gulp.series('scss-compile'));
+  gulp.watch(['app/images/sprites/*.png'], gulp.series('sprite-compile', 'scss-compile'));
 });
 
 gulp.task('clean', function () {
@@ -99,7 +100,7 @@ gulp.task('scss-compile', function () {
 
 gulp.task('default',
   gulp.series(
-    'clean', 'pug-compile', 'sprite', 'scss-compile',
+    'clean', 'pug-compile', 'sprite-compile', 'scss-compile',
     gulp.parallel('start-browserSync', 'watch')
   )
 );
