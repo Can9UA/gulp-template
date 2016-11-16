@@ -5,9 +5,10 @@ syntax: glob
 node_modules
 bower_components
 input
-markup
+public
 build
 *.html
 *.css
 .idea
 .sublime-workspace
+/*.zip

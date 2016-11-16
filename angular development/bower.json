@@ -1,8 +1,8 @@
 {
   "name": "project",
   "private": true,
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
+    "angular": "^1.5.8"
   }
 }

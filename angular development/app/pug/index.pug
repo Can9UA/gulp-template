@@ -1,0 +1,16 @@
+extends _modules/layout
+block body
+  .wrapper(ng-cloak)
+    //- include _modules/header
+    main.main
+      .container
+        section.section-chat(ng-controller="chatCtrl as chat")
+          ul.messages
+            li(ng-init="$last && chat.scrollBottom()" ng-repeat="message in chat.shownMessages track by message.$id"
+                ng-class="{my: chat.author.uid === message.authorId}").messages-item
+              img(ng-src="{{message.authorPhoto}}", alt="{{message.displayName}}").author-avatar
+              h4.message-author {{message.authorName}}
+              p.message-text {{message.text}}
+          textarea(ng-model="chat.newMessage" enter-sender="chat.sendMessage()").new-message-text.pull-left
+          button(ng-click="chat.sendMessage()").btn.btn-green.add-message.pull-right Send
+    //- include _modules/footer
