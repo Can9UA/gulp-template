@@ -59,6 +59,7 @@ gulp.task('watch', function () {
   gulp.watch(['app/pug/**/*.pug'], gulp.series('pug-compile', 'reload')); // TODO: remove html if pug file removed
   gulp.watch(['app/sass/**/*.scss'], gulp.series('scss-compile'));
   gulp.watch(['app/images/sprites/*.png'], gulp.series('sprite-compile', 'scss-compile'));
+  gulp.watch(['app/images/**/*.*', '!app/images/sprites/*.png'], gulp.series('reload'));
   gulp.watch(['app/js/**/*.js'], gulp.series('reload'));
 });
 
