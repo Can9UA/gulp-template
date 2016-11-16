@@ -1,0 +1,18 @@
+.btn {
+  -webkit-appearance: none;
+  background-image: none;
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {cursor: not-allowed;}
+}
+
+.btn-primary {
+}
+.btn-secondary {
+}
+.btn-close {
+}
+.btn-group {
+}
+.btn-sm {min-width: 110px;}
+.btn-lg {min-width: 172px;}

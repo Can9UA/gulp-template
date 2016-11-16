@@ -1,0 +1,31 @@
+label {
+  cursor: pointer;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select {
+  &::-ms-expand {display: none;}
+}
+input[type="radio"],
+input[type="checkbox"] {outline: none;}
+input[type="file"] {display: block;}
+.form-element {
+  outline: none;
+}
+textarea.form-element {
+  height: auto;
+  overflow: auto;
+  resize: none;
+}
+.form-group {}
+.radio,
+.checkbox {
+  display: block;
+  position: relative;
+  label {cursor: pointer;}
+}
+.input-holder-addon {
+}

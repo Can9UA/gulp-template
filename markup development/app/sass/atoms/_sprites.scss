@@ -1,0 +1,3 @@
+[class^="ico"] {display: inline-block;}
+@import "_sprites-mixins";
+@include retina-sprites($retina-groups);

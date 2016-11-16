@@ -1,0 +1,39 @@
+.show {display: block !important;}
+.hidden {display: none !important;}
+
+.pull-left {float: left !important;}
+.pull-right {float: right !important;}
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
+
+.full-width {width: 100% !important;}
+
+.item-table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.item-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.accessibility {
+  left: -9999px;
+  position: absolute;
+  top: 0;
+}
+
+.responsive-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.placeholder-img {display: block;}
+
+.scroll-holder {
+  height: 100%;
+  overflow: auto;
+}

@@ -1,0 +1,21 @@
+// Internal imports
+// --------------------------------------------------
+// @import "slick"; just under the all.scss file
+
+// General components
+@import "utilities/index";
+// @import "layout";
+@import "typography";
+
+// Modules
+// Atoms
+@import "atoms/index";
+
+// Molecules
+@import "molecules/index";
+
+// Organisms
+@import "organisms/index";
+
+// Templates
+@import "templates/index";

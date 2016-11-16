@@ -1,0 +1,24 @@
+// @font-face {
+//   font-family: 'Vm Headers Regular';
+//   src: url('../fonts/vm-headers-regular.eot');
+//   src: url('../fonts/vm-headers-regular.woff') format('woff'),
+//        url('../fonts/vm-headers-regular.otf')  format('otf'),
+//        url('../fonts/vm-headers-regular.ttf')  format('truetype'),
+//        url('../fonts/vm-headers-regular.svg#svgFontName') format('svg');
+// }
+
+h1,
+.h1 {
+}
+h2,
+.h2 {
+}
+h3,
+.h3 {
+}
+p {margin: 0 0 25px;}
+.heading {
+}
+a {
+  &:hover {text-decoration: underline;}
+}
