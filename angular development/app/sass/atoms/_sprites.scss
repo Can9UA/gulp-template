@@ -1,3 +1,6 @@
-[class^="ico"] {display: inline-block;}
+[class^="ico"] {
+  display: inline-block;
+  vertical-align: middle;
+}
 @import "_sprites-mixins";
 @include retina-sprites($retina-groups);
