@@ -1,0 +1,124 @@
+// grid variables start
+$width: 960px;
+$gutter: 20px;
+$columns: 12;
+$column-width: $width / $columns;
+$flexible-column-width: 100% / $columns;
+// grid variables end
+
+// breakpoint names start
+$xs-breakpoint-name: 'xs';
+$sm-breakpoint-name: 'sm';
+$md-breakpoint-name: 'md';
+$lg-breakpoint-name: 'lg';
+// breakpoint names end
+
+.row {
+  margin-bottom: $gutter;
+  margin-left: -($gutter / 2);
+  margin-right: -($gutter / 2);
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  &.no-indent {
+    margin-bottom: 0;
+  }
+}
+[class^="col-"] { 
+  box-sizing: border-box;
+  float: left;
+  padding: 0 $gutter / 2;
+}
+@mixin generate-grid($breakpoint-name, $breakpoint) {
+  @if $breakpoint == 320px {
+
+    // generate classes for elements displaying
+    .hidden-#{$breakpoint-name} {
+      display: none !important;
+    }
+    .visible-#{$breakpoint-name} {
+      display: block !important;
+    }
+    .visible-#{$breakpoint-name}-inline {
+      display: inline-block !important;
+    }
+
+    // generate columns classes
+    @for $i from 1 to $columns + 1 {
+      .col-#{$breakpoint-name}-#{$i} {
+        width: $i * $flexible-column-width;
+      }
+    }
+
+    @for $i from 1 to $columns + 1 {
+      .col-#{$breakpoint-name}-offset-#{$i} {
+        margin-left: $i * $flexible-column-width;
+      }
+    }
+  } @else {
+    
+    @media only screen and (min-width: $breakpoint) {
+
+      // generate classes for elements displaying
+      .hidden-#{$breakpoint-name} {
+        display: none !important;
+      }
+      .visible-#{$breakpoint-name} {
+        display: block !important;
+      }
+      .visible-#{$breakpoint-name}-inline {
+        display: inline-block !important;
+      }
+
+      @for $i from 1 to $columns + 1 {
+        .col-#{$breakpoint-name}-offset-#{$i} {
+          margin-left: $i * $flexible-column-width;
+        }
+      }
+      
+      // generate columns classes
+      @for $i from 1 to $columns + 1 {
+        .col-#{$breakpoint-name}-#{$i} {
+          width: $i * $flexible-column-width;
+        }
+      }
+
+      // generate push and pull classes
+      //@for $i from 1 to $columns + 1 {
+      //  .grid-prepend-#{$breakpoint-name}-#{$i} {
+      //    padding-left: $i * $flexible-column-width;
+      //    
+      //  }
+      //}
+      //@for $i from 1 to $columns + 1 {
+      //  .grid-append-#{$breakpoint-name}-#{$i}{
+      //    padding-right: $i * $flexible-column-width;
+      //  }
+      //}
+    }
+  }
+}
+
+// generate grid
+@include generate-grid($xs-breakpoint-name, $xs-breakpoint);
+@include generate-grid($sm-breakpoint-name, $sm-breakpoint);
+@include generate-grid($md-breakpoint-name, $md-breakpoint);
+@include generate-grid($lg-breakpoint-name, $lg-breakpoint);
+
+.container {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 $gutter / 2;
+}
+@media only screen and (min-width: $sm-breakpoint) {
+  .container { width: 750px; }
+}
+@media only screen and (min-width: $md-breakpoint) {
+  .container { width: 970px; }
+}
+@media only screen and (min-width: $lg-breakpoint) {
+  .container { width: 1170px; }
+}
