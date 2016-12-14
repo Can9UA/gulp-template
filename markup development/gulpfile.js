@@ -167,6 +167,11 @@ gulp.task('build-zip', function () {
              .pipe(gulp.dest('./'));
 });
 
+gulp.task('copyFiles', function () {
+  return gulp.src('app/fonts/**/*.*')
+        .pipe(gulp.dest('./build/fonts/'));
+});
+
 // tasks for work ----------------------
 gulp.task('default',
   gulp.series(
@@ -178,7 +183,7 @@ gulp.task('default',
 gulp.task('build',
   gulp.series(
       'checkBuild', 'clean', 'pug-compile', 'sprite-compile', 'scss-compile', 'clean-build',
-      gulp.parallel('minimize', 'imagemin')
+      gulp.parallel('minimize', 'imagemin', 'copyFiles')
     )
 );
 
