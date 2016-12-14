@@ -1,3 +1,25 @@
+-
+  var nav = [{
+      opener: 'Page 1',
+      link: 'page1.html',
+      dropList: []
+    }, {
+      opener: 'Page 2',
+      link: 'page2.html',
+      dropList: [
+        {opener: 'Page 2-1', link: '#'},
+        {opener: 'Page 2-2', link: '#'},
+    ]
+  }];
 header.header
   .container
-    | Its me header
+    ul.nav-list
+      each item, index in nav
+        li(class="nav-list_item" class=(navActiveIndex == index) ? 'active' : '')
+          - if (item.dropList != null)
+            a(href=item.link).has-drop.nav-list-opener #{item.opener}
+            ul.nav-drop
+              each dropItem, index in item.dropList
+                li.nav-drop_item: a(href=dropItem.link) #{dropItem.opener}
+          - else
+            a(href=item.link).nav-list-opener #{item.opener}
