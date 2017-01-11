@@ -1,6 +1,4 @@
-label {
-  cursor: pointer;
-}
+label { cursor: pointer; }
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -29,3 +27,51 @@ textarea.form-element {
 }
 .input-holder-addon {
 }
+
+// ---------- radio and checkbox ----------
+.form-check { margin-bottom: 2rem; }
+.form-check-label {
+  position: relative;
+  padding-left: 42px;
+  input { visibility: hidden; }
+  input + .input-placeholder {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #a7a7a7;
+  }
+  input:checked + .input-placeholder {
+    &:after {
+      content: '';
+      display: block;
+      top: 50%;
+      left: 50%;
+      width: 73%;
+      height: 73%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      background-color: #a7a7a7;
+    }
+  }
+  input[type="radio"] + .input-placeholder { border-radius: 50%; }
+  input[type="radio"]:checked + .input-placeholder {
+    &:after { border-radius: 50%; }
+  }
+}
+//<div class="form-check">
+//  <label class="form-check-label" for="radio-1">
+//    <input type="radio" id="radio-1" class="form-check-input" name="optionsRadios" value="option1">
+//    <span class="input-placeholder"></span> Yes in the next 6 months
+//  </label>
+//</div>
+
+//<div class="form-check">
+//  <label class="form-check-label">
+//    <input type="checkbox" class="form-check-input">
+//    <span class="input-placeholder"></span>Yes
+//  </label>
+//</div>

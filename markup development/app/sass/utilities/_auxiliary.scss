@@ -27,13 +27,17 @@
 
 .img-responsive {
   display: block;
+  height: auto;
   margin: 0 auto;
   max-width: 100%;
 }
 
-.img-rounded {
-  border-radius: 3px;
+.img-fluid {
+  height: auto;
+  max-width: 100%;
 }
+
+.img-rounded { border-radius: 3px; }
 
 .placeholder-img {display: block;}
 
